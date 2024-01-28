@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexpage</title>
+    <link rel="icon" href="https://www.shutterstock.com/shutterstock/photos/1589096113/display_1500/stock-vector-happy-birthday-to-you-hand-drawn-typography-headline-for-greeting-cards-in-vintage-style-design-1589096113.jpg" type="image/x-icon">
+    <style>
+       
+        body{
+            background-attachment: fixed;
+            background-repeat: none;
+            justify-content: center;
+        }
+        .content
+        {
+            animation: fadeInUp 1.4s ease-in;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15%;
+            border: 2px solid #fff;
+            border-radius: 2pc;
+            padding-bottom: 2%;
+            margin: 20% 20% 20% 20%; 
+            margin-right: 20%;            
+        }
+        #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      z-index: -1; 
+    }
+        .heading
+        {
+            text-align: center;
+            font-size: 200%;
+            color: bisque;
+            font-family:'Trebuchet MS';
+            justify-content: center;
+            
+        }
+        .input
+        {
+            text-align: center;
+            
+        }
+        .input input
+        {
+            font-size: 30px;
+            width: 200px;
+            font-family: monospace;
+            border-radius: 30px;
+            border: none;
+            padding: 20px 30px 20px 30px;
+            text-align: center;
+            background-color: rgb(246, 246, 235);
+            transition: 0.3s ease-in-out;
+        }
+        .input input:hover
+        {
+            scale: 1.1;
+        }
+        .button
+        {
+            text-align: center;
+            font-size: 150%;
+            padding:   10px 30px 10px 30px;
+            margin-top: 40px;
+            border-radius: 30px;
+            border: none;
+            background-color: rgb(49, 8, 8); 
+            color: beige;
+            transition: 0.3s;
+          
+        }
+        .button:hover
+        {
+            scale: 1.2;
+            background-color:rgb(190, 101, 101);
+            opacity: 0.8;
+        }
+        @keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateZ(50px);
+  }
+  
+  100% {
+      opacity: 1;
+      transform: translateZ(0px);
+  }
+}
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="C:\Users\Saikiran Shet\OneDrive\Documents\vidweb\Confetti_Alpha_Channel.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <header>
+            <div class="heading">
+                <h1> Enter the passcode </h1>
+            </div>
+            <div class="input">
+                <input type="password" id="passcode" required>
+            </div>
+        </header>
+        <center><button class="button" onclick= checkPassword()>Go</button></center>
+      </div>
+   
+    <script>
+        function checkPassword() {
+          var enteredPassword = document.getElementById('passcode').value;
+    
+          if ((enteredPassword === 'Puski')||(enteredPassword === 'PUSKI')||(enteredPassword === 'puski'))
+           {
+            window.location.href = 'page1.html';
+          } 
+          else
+           {
+           alert("Wrong password.. Try again!")
+          }
+        }
+      </script>
+</body>
+</html>
